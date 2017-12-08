@@ -28,4 +28,3 @@ if ($all->diff($passed)->isEmpty()) {
     unlink($passedFile);
     echo "Attention, ça repart... \n\n";
 }
-

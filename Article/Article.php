@@ -103,4 +103,4 @@ try {
 }
 
 
-$pdo = new \PDO('localhost','root', '', [PDO::SQLSRV_ENCODING_UTF8]);
+$pdo = new \PDO('localhost', 'root', '', [PDO::SQLSRV_ENCODING_UTF8]);

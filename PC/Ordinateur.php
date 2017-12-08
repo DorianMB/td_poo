@@ -12,7 +12,4 @@ abstract class Ordinateur
         $this->lecteurCd;
         // le reste...
     }
-
-
-
 }

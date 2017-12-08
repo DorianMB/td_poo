@@ -11,6 +11,4 @@ class Asus extends Ordinateur
     {
         $this->gpu;
     }
-
-
 }

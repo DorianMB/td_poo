@@ -1,40 +1,50 @@
 <?php
-/**
- * Created by PhpStorm.
- * User: dorian
- * Date: 06/12/2017
- * Time: 18:14
- */
 
 namespace Ecrire;
 
-
 class Phrase
 {
-    private $contenu;
-    private $couleur;
+    private $content;
+    private $color;
 
-    public function setContenu($contenu)
+    public function __construct($content, Stylo $stylo)
     {
-        $this->contenu = $contenu;
+        $this->setContent($content)->setColor($stylo->getColor());
     }
 
-    public function getContenu()
+    public function getContent()
     {
-        return $this->contenu;
+        return $this->content;
     }
 
-    public function setCouleur($couleur)
+    public function setContent($content)
     {
-        $this->couleur = $couleur;
+        $this->content = $content;
+
+        return $this;
     }
 
-    public function getCouleur()
+    public function getColor()
     {
-        return $this->couleur;
+        return $this->color;
     }
 
-    public function sur(Cahier $cahier){
+    public function setColor($color)
+    {
+        $this->color = $color;
+
+        return $this;
+    }
+
+    public function sur(Cahier $cahier)
+    {
         $cahier->setContent($this);
+
+        return $cahier;
+    }
+
+    public function en($color)
+    {
+        return $this->setColor(QuatreCouleurs::filterColor($color));
     }
 }

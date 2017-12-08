@@ -12,9 +12,9 @@ final class Surface extends Ordinateur
         $this->gpu;
     }
 
-    public function toucherEcran() {
+    public function toucherEcran()
+    {
         $this->ecran;
         //.....
     }
-
 }
