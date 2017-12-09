@@ -31,10 +31,9 @@ class Cahier
         return $this;
     }
 
-
     public function lire()
     {
-        foreach($this->pages as $numero => $phrases) {
+        foreach ($this->pages as $numero => $phrases) {
             echo "\n Sur la page n° $numero du cahier format $this->format on peut trouver les phrases :\n";
             foreach ($phrases as $phrase) {
                 /** @var \Ecrire\Phrase $phrase */
@@ -59,4 +58,17 @@ class Cahier
     {
         return $this->pages['temp'];
     }
+
+    public function setPages($pages)
+    {
+        $this->pages = $pages;
+
+        return $this;
+    }
+
+    public function getPages()
+    {
+        return $this->pages;
+    }
+
 }
